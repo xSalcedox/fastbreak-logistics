@@ -1,0 +1,62 @@
+{
+  "inventario": [
+    {
+      "id": 1,
+      "nombre": "Balones Oficiales Molten Size 7",
+      "categoria": "Balones",
+      "cantidadTotal": 15,
+      "cantidadActual": 12,
+      "estado": "Completo",
+      "responsable": "Coach Carlos Ruiz",
+      "umbralCritico": 5
+    },
+    {
+      "id": 2,
+      "nombre": "Botiquín Primeros Auxilios Campo",
+      "categoria": "Botiquín",
+      "cantidadTotal": 2,
+      "cantidadActual": 0,
+      "estado": "Faltante",
+      "responsable": "Dr. Méndez (Médico)",
+      "umbralCritico": 1
+    },
+    {
+      "id": 3,
+      "nombre": "Conos de Entrenamiento Rígidos",
+      "categoria": "Conos",
+      "cantidadTotal": 30,
+      "cantidadActual": 28,
+      "estado": "Completo",
+      "responsable": "Coach Ana Gómez",
+      "umbralCritico": 8
+    },
+    {
+      "id": 4,
+      "nombre": "Termos de Agua 20L",
+      "categoria": "Agua",
+      "cantidadTotal": 5,
+      "cantidadActual": 1,
+      "estado": "En revisión",
+      "responsable": "Logística General",
+      "umbralCritico": 2
+    }
+  ],
+  "logsIA": [
+    {
+      "id": 101,
+      "itemId": 2,
+      "fecha": "2026-11-03 08:00",
+      "evento": "Alerta Predictiva: Botiquín agotado antes de sesión matutina",
+      "severidad": "Crítica",
+      "scriptSugerido": "ACCIÓN LEAN: Reposición inmediata requerida por protocolo de seguridad."
+    },
+    {
+      "id": 102,
+      "itemId": 4,
+      "fecha": "2026-11-03 09:15",
+      "evento": "Análisis Seis Sigma: Desgaste acelerado en termos de agua",
+      "severidad": "Media",
+      "scriptSugerido": "PROGRAMAR REABASTECIMIENTO JIT: El stock de agua está por debajo del umbral preventivo (2 unidades)."
+    }
+  ]
+}

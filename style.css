@@ -1,0 +1,612 @@
+/**
+ * ARCHIVO: style.css
+ * PROYECTO: FastBreak - Sistema de Control Logístico y de Utilería
+ * DISEÑO: Paleta corporativa (Blanco predominante, Azul Rey y Naranja Deportivo)
+ */
+
+:root {
+    --primary-blue: #0052CC;
+    --accent-orange: #FF6B00;
+    --bg-main: #FAFAFA;
+    --bg-card: #FFFFFF;
+    --text-primary: #1A1A1A;
+    --text-muted: #666666;
+    --border-color: #E0E0E0;
+    --danger-color: #DC3545;
+    --success-color: #28A745;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+/* ==========================================
+   1. NAVBAR INSTITUCIONAL Y MODERNA
+   ========================================== */
+.navbar {
+    background-color: var(--bg-card);
+    border-bottom: 2px solid var(--border-color);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.brand-icon {
+    font-size: 1.6rem;
+}
+
+.navbar h1 {
+    color: var(--primary-blue);
+    font-size: 1.4rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    margin: 0;
+}
+
+.brand-sub {
+    color: var(--accent-orange);
+    font-weight: 600;
+}
+
+/* Botones de Navegación Estilo Píldora */
+.nav-links {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+}
+
+.nav-btn {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 0.5rem 1.25rem;
+    border-radius: 8px;
+    background-color: var(--bg-main);
+    border: 1px solid var(--border-color);
+    transition: all 0.25s ease;
+}
+
+.nav-btn:hover {
+    background-color: var(--primary-blue);
+    color: #FFFFFF;
+    border-color: var(--primary-blue);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 82, 204, 0.2);
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.badge-ai {
+    background-color: #CCE5FF;
+    color: var(--primary-blue);
+    padding: 0.4rem 0.85rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* ==========================================
+   2. SECCIÓN HERO (Fondo de Básquetbol + Azul Rey)
+   ========================================== */
+.hero-section {
+    background: linear-gradient(135deg, rgba(0, 82, 204, 0.88), rgba(0, 40, 120, 0.92)), 
+                url('https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&q=80&w=1600');
+    background-size: cover;
+    background-position: center;
+    color: #FFFFFF;
+    padding: 5rem 2rem;
+    text-align: center;
+    border-bottom: 4px solid var(--accent-orange);
+}
+
+.hero-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.hero-section p {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+    color: #F0F0F0;
+}
+
+/* ==========================================
+   3. BOTONES DE ACCIÓN (CTA Naranja Deportivo)
+   ========================================== */
+.btn {
+    display: inline-block;
+    font-weight: 600;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid transparent;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 6px;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn-primary {
+    background-color: var(--accent-orange);
+    color: #FFFFFF;
+}
+
+.btn-primary:hover {
+    background-color: #E55F00;
+    transform: translateY(-1px);
+}
+
+.btn-secondary {
+    background-color: var(--primary-blue);
+    color: #FFFFFF;
+}
+
+.btn-secondary:hover {
+    background-color: #0040A5;
+}
+
+.btn-danger {
+    background-color: var(--danger-color);
+    color: #FFFFFF;
+}
+
+.btn-danger:hover {
+    background-color: #BD2130;
+}
+
+.btn-sm {
+    padding: 0.35rem 0.75rem;
+    font-size: 0.85rem;
+}
+
+/* ==========================================
+   4. TARJETAS KPI Y LAYOUT PRINCIPAL
+   ========================================== */
+.kpi-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.kpi-card {
+    background-color: var(--bg-card);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    border-left: 5px solid var(--primary-blue);
+    text-align: center;
+}
+
+.kpi-card h3 {
+    font-size: 2rem;
+    color: var(--primary-blue);
+    margin-bottom: 0.5rem;
+}
+
+.main-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 2rem;
+    padding: 0 2rem 3rem 2rem;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+    .main-layout {
+        grid-template-columns: 1fr;
+    }
+    .navbar {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+.card {
+    background-color: var(--bg-card);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    margin-bottom: 1.5rem;
+}
+
+.card h2 {
+    color: var(--primary-blue);
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+    border-bottom: 2px solid var(--bg-main);
+    padding-bottom: 0.5rem;
+}
+
+/* ==========================================
+   5. TABLAS Y BADGES
+   ========================================== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+th, td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+th {
+    background-color: var(--primary-blue);
+    color: #FFFFFF;
+    font-weight: 600;
+}
+
+tr.critical-row {
+    background-color: #FFF3CD !important;
+}
+
+.badge {
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.badge-Completo {
+    background-color: #D4EDDA;
+    color: #155724;
+}
+
+.badge-Faltante {
+    background-color: #F8D7DA;
+    color: #721C24;
+}
+
+.badge-En-revision {
+    background-color: #CCE5FF;
+    color: #004085;
+}
+
+/* ==========================================
+   6. LOGS DE ASISTENTE DE IA
+   ========================================== */
+.log-item {
+    background-color: var(--bg-main);
+    border-left: 4px solid var(--primary-blue);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+}
+
+.log-item.Crítica {
+    border-left-color: var(--danger-color);
+    background-color: #FDF2F2;
+}
+
+.log-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+}
+
+.log-script {
+    font-style: italic;
+    color: var(--primary-blue);
+    margin-top: 0.5rem;
+}
+
+/* ==========================================
+   7. FORMULARIOS Y MODAL DE LOGIN SEGURO
+   ========================================== */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 0.95rem;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: var(--bg-card);
+    padding: 2rem;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text-muted);
+}
+
+.error-msg {
+    color: var(--danger-color);
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+}/* ==========================================
+   CORRECCIÓN NAVBAR Y MENÚ SUPERIOR
+   ========================================== */
+.navbar {
+    background-color: var(--bg-card);
+    border-bottom: 2px solid var(--border-color);
+    padding: 0.8rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-brand h1 {
+    color: var(--primary-blue);
+    font-size: 1.3rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    margin: 0;
+}
+
+/* Espaciado y diseño ordenado de los enlaces */
+.nav-links {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.nav-btn {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 0.4rem 0.9rem;
+    border-radius: 6px;
+    background-color: #F0F2F5;
+    border: 1px solid var(--border-color);
+    transition: all 0.2s ease;
+}
+
+.nav-btn:hover {
+    background-color: var(--primary-blue);
+    color: #FFFFFF;
+    border-color: var(--primary-blue);
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+/* ==========================================
+   CORRECCIÓN BOTONES EN LA SECCIÓN HERO
+   ========================================== */
+.hero-section {
+    background: linear-gradient(135deg, rgba(0, 82, 204, 0.9), rgba(0, 40, 120, 0.95)), 
+                url('https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&q=80&w=1600');
+    background-size: cover;
+    background-position: center;
+    color: #FFFFFF;
+    padding: 4.5rem 2rem;
+    text-align: center;
+    border-bottom: 4px solid var(--accent-orange);
+}
+
+.hero-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    align-items: center;
+}
+
+/* Botón secundario visible sobre fondo azul */
+.btn-outline {
+    background-color: transparent;
+    color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+    padding: 0.7rem 1.4rem;
+    font-weight: 600;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.btn-outline:hover {
+    background-color: #FFFFFF;
+    color: var(--primary-blue);
+}
+/* ==========================================
+   MENÚ SUPERIOR CON ESTILO DE BOTÓN SÓLIDO
+   ========================================== */
+.nav-links {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    background-color: transparent; /* Quitamos el fondo ovalado */
+    padding: 0;
+    border: none;
+}
+
+.nav-btn {
+    display: inline-block;
+    font-weight: 600;
+    text-align: center;
+    padding: 0.5rem 1.1rem;
+    font-size: 0.9rem;
+    border-radius: 6px; /* Esquinas redondeadas exactas a los botones de acción */
+    background-color: var(--primary-blue); /* Fondo Azul Rey sólido */
+    color: #FFFFFF;
+    text-decoration: none;
+    border: 1px solid transparent;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-btn:hover {
+    background-color: var(--accent-orange); /* Cambia al Naranja Deportivo al pasar el mouse */
+    color: #FFFFFF;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(255, 107, 0, 0.25);
+}/* ==========================================
+   BOTONES DE NAVEGACIÓN SUPERIOR (ESTILO SÓLIDO)
+   ========================================== */
+.navbar .nav-links {
+    display: flex !important;
+    gap: 0.75rem !important;
+    align-items: center !important;
+    background-color: transparent !important;
+    padding: 0 !important;
+    border: none !important;
+}
+
+.navbar .nav-links .nav-btn {
+    display: inline-block !important;
+    font-weight: 600 !important;
+    text-align: center !important;
+    padding: 0.5rem 1.2rem !important;
+    font-size: 0.9rem !important;
+    border-radius: 6px !important;
+    background-color: var(--primary-blue) !important;
+    color: #FFFFFF !important;
+    text-decoration: none !important;
+    border: 1px solid transparent !important;
+    transition: all 0.2s ease !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+}
+
+.navbar .nav-links .nav-btn:hover {
+    background-color: var(--accent-orange) !important;
+    color: #FFFFFF !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 8px rgba(255, 107, 0, 0.25) !important;
+}/* ==========================================
+   FORZAR ESTILO DE BOTÓN SÓLIDO EN NAVEGACIÓN
+   ========================================== */
+header.navbar .nav-links a.nav-btn {
+    display: inline-block !important;
+    text-decoration: none !important;
+    background-color: #0052CC !important;
+    color: #FFFFFF !important;
+    font-weight: 600 !important;
+    font-size: 0.9rem !important;
+    padding: 0.5rem 1.2rem !important;
+    border-radius: 6px !important;
+    border: none !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+    transition: all 0.2s ease !important;
+}
+
+header.navbar .nav-links a.nav-btn:hover {
+    background-color: #FF6B00 !important;
+    color: #FFFFFF !important;
+    text-decoration: none !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 8px rgba(255, 107, 0, 0.25) !important;
+}/* ==========================================================================
+   ACTUALIZACIÓN SENIOR - FASTBREAK: Botones Superiores & Fondo Hero
+   ========================================================================== */
+
+/* 1. Transformación de enlaces superiores en botones sólidos rectangulares */
+header.navbar .nav-links a.nav-btn {
+    display: inline-block !important;
+    text-decoration: none !important;
+    background-color: #0052CC !important; /* Azul Rey institucional */
+    color: #FFFFFF !important;
+    font-weight: 700 !important;
+    font-size: 0.9rem !important;
+    padding: 0.5rem 1.2rem !important;
+    border-radius: 6px !important; /* Esquinas semirredondeadas exigidas */
+    border: none !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+    transition: all 0.25s ease-in-out !important;
+}
+
+header.navbar .nav-links a.nav-btn:hover {
+    background-color: #FF6B00 !important; /* Transición a Naranja Deportivo */
+    color: #FFFFFF !important;
+    text-decoration: none !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 8px rgba(255, 107, 0, 0.3) !important;
+}
+
+/* 2. Optimización de la sección Hero para mayor visibilidad del fondo de básquetbol */
+.hero-section {
+    background: linear-gradient(135deg, rgba(0, 82, 204, 0.68), rgba(0, 40, 120, 0.75)), 
+                url('https://images.unsplash.com/photo-1546519638-68e109498ffc?auto=format&fit=crop&q=80&w=1600') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    color: #FFFFFF !important;
+    padding: 5rem 2rem !important;
+    text-align: center !important;
+    border-bottom: 4px solid var(--accent-orange) !important;
+}
